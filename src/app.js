@@ -31,7 +31,13 @@ app.get("/", (req, res) => {
 //         res.render("index", { title: "Bienvenue sur mon blog, lisez de fantastiques récits sur mes voyages ! - Accueil", stories});    
 //     });
 // });
-app.get("/story/:id", (req, res)=> {
+
+// pour récupérer un paramètre de l'url dynamique, on utilise les 2 points ":" suivi du nom du paramètre
+// ce nom ira dans req.params.nomDuParametre
+// coté fichier ejs, on va utiliser l'id de l'article pour construire l'url
+// <a href="/story/<%= story.id %>
+// la valeur de href est envoyé en requête vers la serveur en conservant la même forme
+app.get("/story/:id", (req, res)=> { 
     // tout ce qui vient de l'url est une String conversion ligne 38
     console.log(typeof req.params.id); // typeof permets de vérifier me type de donnée de la variable 
     
