@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style/index.css" />
+		<title><%= title %></title>
+	</head>
+	<body>
+		<header>
+			<h1>My Blog</h1>
+			<nav>
+				<a href="/" class="active">Accueil</a>
+			</nav>
+		</header>
+			<main>
+				<section>
+
+					<h2>Les derniers articles</h2>
+
+					<% for( const story of stories ) { %>
+						<article>
+							<a href="/story/<%= story.id %>" title="Vers le détail de l'article" >
+								<h3><%= story.title %> <small>by <%= story.author%> le <%= new Date(story.publishTime).toLocaleDateString() %> à <%= new Date(story.publishTime).toLocaleTimeString() %></small></h3>
+								<img src="images/<%= story.img_src%>" alt="">
+							</a>
+						</article>
+					<% } %>
+
+					
+				</section>
+				<aside>
+					<h2>archives</h2>
+					<ul>
+						<li>Janvier</li>
+						<li>Février</li>
+						<li>Mars</li>
+					</ul>
+				</aside>
+			</main>
+		</header>
+
+		<footer>
+			<p>© 2021 - Romain Fournier - My blog </p>
+			<p>Photo de <a href="https://unsplash.com/fr/@illiyapresents?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Illiya Vjestica</a> sur <a href="https://unsplash.com/fr/photos/troupeau-de-moutons-sur-un-champ-dherbe-verte-pendant-la-journee-W5FdAcHp7l8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+			</p>
+		</footer>
+	</body>
+</html>
