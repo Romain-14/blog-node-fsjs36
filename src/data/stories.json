@@ -1,86 +1,12 @@
 {
-    "status": 200,
-    "message": "stories retrieved successfully",
-    "stories":[
-        {
-            "id": 1,
-            "title": "title1",
-            "content": "content1",
-            "publishTime": "01/01/2024 12:00:00",
-            "author": "author1",
-            "img_src": "kebab-paysage.webp"
-        },
-        {
-            "id": 2,
-            "title": "title2",
-            "content": "content2",
-            "publishTime": "02/02/2024 12:00:00",
-            "author": "author2",
-            "img_src": "kebab-paysage.webp"
-        },
-        {
-            "id": 3,
-            "title": "title3",
-            "content": "content3",
-            "publishTime": "03/03/2024 12:00:00",
-            "author": "author3",
-            "img_src": "kebab-paysage.webp"
-        },
-        {
-            "id": 4,
-            "title": "title4",
-            "content": "content4",
-            "publishTime": "04/04/2024 12:00:00",
-            "author": "author4",
-            "img_src": "kebab-paysage.webp"
-        },
-        {
-            "id": 5,
-            "title": "title5",
-            "content": "content5",
-            "publishTime": "05/05/2024 12:00:00",
-            "author": "author5",
-            "img_src": "kebab-paysage.webp"
-        },
-        {
-            "id": 6,
-            "title": "title6",
-            "content": "content6",
-            "publishTime": "06/06/2024 12:00:00",
-            "author": "author6",
-            "img_src": "kebab-paysage.webp"
-        },
-        {
-            "id": 7,
-            "title": "title7",
-            "content": "content7",
-            "publishTime": "07/07/2024 12:00:00",
-            "author": "author7",
-            "img_src": "kebab-paysage.webp"
-        },
-        {
-            "id": 8,
-            "title": "title8",
-            "content": "content8",
-            "publishTime": "08/08/2024 12:00:00",
-            "author": "author8",
-            "img_src": "kebab-paysage.webp"
-        },
-        {
-            "id": 9,
-            "title": "title9",
-            "content": "content9",
-            "publishTime": "09/09/2024 12:00:00",
-            "author": "author9",
-            "img_src": "kebab-paysage.webp"
-        },
-        {
-            "id": 10,
-            "title": "title10",
-            "content": "content10",
-            "publishTime": "10/10/2024 12:00:00",
-            "author": "author10",
-            "img_src": "kebab-paysage.webp"
-        }
-    ]
+	"stories": [
+		{
+			"id": 2,
+			"title": "adzad",
+			"content": "dazdaz",
+			"publishTime": "2024-04-19T17:00",
+			"author": "zaefezfez",
+			"img_src": "kebab-paysage.webp"
+		}
+	]
 }

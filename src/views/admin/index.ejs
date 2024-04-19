@@ -8,38 +8,25 @@
 	</head>
 	<body>
 		<header>
-			<h1>My Blog</h1>
+			<h1>Gestion du blog</h1>
 			<nav>
-				<a href="/" class="active">Accueil</a>
-				<a href="/admin">Admin</a>
+				<a href="/">Accueil</a>
+				<a href="/admin" class="active">Admin</a>
 			</nav>
 		</header>
+		
 			<main>
-				<section>
-
-					<h2>Les derniers articles</h2>
-
-					<% for( const story of stories ) { %>
-						<article>
-							<a href="/story/<%= story.id %>" title="Vers le détail de l'article" >
-								<h3><%= story.title %> <small>by <%= story.author%> le <%= new Date(story.publishTime).toLocaleDateString() %> à <%= new Date(story.publishTime).toLocaleTimeString() %></small></h3>
-								<img src="images/<%= story.img_src%>" alt="">
-							</a>
-						</article>
-					<% } %>
-
+				<form action="/story/add" method="post">
+                    <input type="text" name="title" placeholder="Titre de l'article" required>
+                    <textarea name="content" placeholder="Description de l'article" required></textarea>
+                    <input type="datetime-local" name="publishTime" required>
 					
-				</section>
-				<aside>
-					<h2>archives</h2>
-					<ul>
-						<li>Janvier</li>
-						<li>Février</li>
-						<li>Mars</li>
-					</ul>
-				</aside>
+                    <input type="text" name="author" placeholder="Auteur de l'article" required>
+                    <input type="text" name="img_src" value="kebab-paysage.webp" required>
+
+                    <button type="submit">Envoyer</button>
+                </form>
 			</main>
-		</header>
 
 		<footer>
 			<p>© 2024 - Romain Fournier - My blog </p>

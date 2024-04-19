@@ -47,14 +47,44 @@ Configuration du serveur
 
 ## Jour 2
 
-Configuration & modules
-- formulaire 
-- router
+Si pas fait du jour 1:
+- la page d'accueil affiche chaque article avec le titre, l'auteur, la date et une image
+- la page d'un article affiche l'article en entier : description (content) en plus
+- lien retour vers l'accueil dans la page article(une story)
+
+Ajout :
+Fonctionnalités
+- formulaire d'ajout d'un article
 - écriture dans le fichier json
+- router ?
 
 Pages :
 - Admin
-    - un formulaire permettra à l'utilisateur d'ajouter un article 
+    - un formulaire permettra à l'administrateur d'ajouter un article 
+
+Ajouter dans la navigation un lien vers le panneau admin pour faciliter le développement
+
+### Détail
+
+1. Voir ligne 50 à 52
+2. supprimer le fichier json, n'ajouter que : `{ "stories": [] }`
+2. créer le fichier admin.ejs
+3. créer la route d'accès à la page admin
+    - envoi du fichier de vue Admin
+4. créer le formulaire d'ajout d'article
+    - input text pour le `title`
+    - textarea pour le `content`
+    - input text pour l'`img_src` (2ème partie de node pour gérer l'ajout réel d'image)
+        - ajouter un attribut value avec le nom de votre image placeholder ça évitera les manip'
+    - input text pour l'`author`
+    - input date pour la `publishTime`
+5. créer la route d'ajout d'article (méthode `post`)
+    - récupération des données du formulaire
+    - écriture dans le fichier json du nouvel article
+        - l'`id` se doit d'être unique, il sera équivalent à la longueur du tableau story + 1
+        - les autres propriétés vont être celles des inputs/textarea
+    - quand l'insertion d'un article se passe bien, faire en sorte de combiner les anciens articles plus le nouveau
+
 
 ## Jour 3
 
